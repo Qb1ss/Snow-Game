@@ -53,12 +53,21 @@
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\PrettyObjectScripts\PrettyObject.cs" />
-    <Compile Include="Assets\PrettyObjectScripts\Utils\EditorUtils.cs" />
     <Compile Include="Assets\PrettyObjectScripts\Utils\EditorColors.cs" />
-    <Compile Include="Assets\Scripts\Charаcter\Character_Movement.cs" />
     <Compile Include="Assets\Scripts\Charаcter\Camera.cs" />
     <Compile Include="Assets\Scripts\Charаcter\Character_SpawnGun.cs" />
+    <Compile Include="Assets\Scripts\Charаcter\Character_Movement.cs" />
+    <Compile Include="Assets\PrettyObjectScripts\Utils\EditorUtils.cs" />
+    <Compile Include="Assets\PrettyObjectScripts\PrettyObject.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemies.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Guns\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Guns\Gun.cs" />
+    <Compile Include="Assets\Scripts\Missions\Mission.cs" />
+    <Compile Include="Assets\Scripts\Missions\Missions.cs" />
+    <Compile Include="Assets\Scripts\GameSettings\CanvasHelper.cs" />
+    <Compile Include="Assets\Scripts\UI\SceneTransition.cs" />
+    <Compile Include="Assets\Scripts\UI\ButtonGoNextPoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -646,6 +655,9 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.DeviceSimulator.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.DeviceSimulator.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -658,11 +670,12 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.DeviceSimulator.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.DeviceSimulator.Editor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{2CFD4612-9D10-69AE-AB68-DE93681B2680}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="CustomToolbar.Editor.csproj">
       <Project>{10BA9FB7-665D-A615-0BA7-F7C655610C15}</Project>
       <Name>CustomToolbar.Editor</Name>
@@ -670,10 +683,6 @@
     <ProjectReference Include="NavMeshComponents.csproj">
       <Project>{EEC77ACD-09B3-124B-0161-2858FBE2830F}</Project>
       <Name>NavMeshComponents</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{2CFD4612-9D10-69AE-AB68-DE93681B2680}</Project>
-      <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

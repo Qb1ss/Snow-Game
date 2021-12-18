@@ -54,8 +54,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\PrettyObjectScripts\Editor\FoldoutUsage.cs" />
-    <Compile Include="Assets\PrettyObjectScripts\Editor\HierarchyItem.cs" />
     <Compile Include="Assets\PrettyObjectScripts\Editor\PrettyHierarchy.cs" />
+    <Compile Include="Assets\PrettyObjectScripts\Editor\HierarchyItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -688,6 +688,9 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.DeviceSimulator.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.DeviceSimulator.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -700,14 +703,23 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.DeviceSimulator.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.DeviceSimulator.Editor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{BCB0AA95-ED1E-EF1D-6484-BF6333D02F45}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="CustomToolbar.Editor.csproj">
+      <Project>{10BA9FB7-665D-A615-0BA7-F7C655610C15}</Project>
+      <Name>CustomToolbar.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{2CFD4612-9D10-69AE-AB68-DE93681B2680}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{EEC77ACD-09B3-124B-0161-2858FBE2830F}</Project>
+      <Name>NavMeshComponents</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
