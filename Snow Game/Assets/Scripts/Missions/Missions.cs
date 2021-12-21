@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class Missions : MonoBehaviour
@@ -8,9 +6,10 @@ public class Missions : MonoBehaviour
     [Header("")]
     [SerializeField] private List<Mission> _mission;
 
-    private int _currentMission;
+    [HideInInspector] public int _currentMission;
 
     private ButtonGoNextPoint _goNextPointButton;
+    private SceneTransition _sceneTransition;
 
 
     private void Start()
@@ -19,6 +18,9 @@ public class Missions : MonoBehaviour
         _mission[_currentMission].OnChecked();
 
         _goNextPointButton = FindObjectOfType<ButtonGoNextPoint>();
+        _sceneTransition = FindObjectOfType<SceneTransition>();
+
+        _sceneTransition.UpdateUIProgressBarSlider(_currentMission, _mission.Count);
     }
 
 
@@ -38,5 +40,7 @@ public class Missions : MonoBehaviour
                 _goNextPointButton.gameObject.SetActive(true);
             }
         }
+
+        _sceneTransition.UpdateUIProgressBarSlider(_currentMission, _mission.Count);
     }
 }

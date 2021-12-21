@@ -184,7 +184,6 @@ MonoBehaviour:
   _moveSpeed: 5
   _waitPoints: []
   IsMoving: 0
-  _goNextPointButton: {fileID: 0}
 --- !u!114 &2081669910214033603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,5 +197,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guns:
-  - {fileID: 9115766134988448285, guid: a874d01d87ca9d0458ad0c1bd10223be, type: 3}
+  - {fileID: 1109677044781846912, guid: e43930ba3825501448df7c3affe1ff93, type: 3}
   _gunSpawnPoint: {fileID: 2053290316311821688}

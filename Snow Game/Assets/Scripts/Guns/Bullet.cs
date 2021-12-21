@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent (typeof (Rigidbody), typeof (BoxCollider))]
 public class Bullet : MonoBehaviour
 {
     public event UnityAction Hitted;
 
     [Header("Bullet Parameters")]
-    [SerializeField] private float _speed = 30;
+    [SerializeField] private float _speed = 15;
 
     [HideInInspector] public Vector3 TargetBulletPosition;
 
